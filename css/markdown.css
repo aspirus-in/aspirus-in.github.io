@@ -1,0 +1,150 @@
+/* Base16 Colors used in the entire style */
+
+:root {
+	--b0: #fdf6e3;
+	--b1: #eee8d5;
+	--b2: #93a1a1;
+	--b3: #839496;
+	--b4: #657b83;
+	--b5: #586e75;
+	--b6: #073642;
+	--b7: #002b36;
+	--b8: #dc322f;
+	--b9: #cb4b16;
+	--bA: #b58900;
+	--bB: #859900;
+	--bC: #2aa198;
+	--bD: #268bd2;
+	--bE: #6c71c4;
+	--bF: #d33682;
+}
+
+@media (prefers-color-scheme: dark) { 
+	:root {
+		--b0: #002b36;
+		--b1: #073642;
+		--b2: #586e75;
+		--b3: #657b83;
+		--b4: #839496;
+		--b5: #93a1a1;
+		--b6: #eee8d5;
+		--b7: #fdf6e3;
+		--b8: #dc322f;
+		--b9: #cb4b16;
+		--bA: #b58900;
+		--bB: #859900;
+		--bC: #2aa198;
+		--bD: #268bd2;
+		--bE: #6c71c4;
+		--bF: #d33682;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+@font-face {
+	font-family: Iosevka;
+	src: url('/font/Iosevka.ttf');
+}
+
+html, body {
+	font-family: 'Noto Serif', serif;
+	font-size: 20px;
+	line-height: 40px;
+	color: var(--b5);
+}
+
+body {
+	max-width: 800px;
+	margin: auto;
+	padding-left:  50px;
+	padding-right: 50px;
+	padding-top: 200px;
+	background-color: var(--b0);
+}
+
+h1 { font-size: 50px; }
+h2 { font-size: 35px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 20px; }
+h6 { font-size: 20px; }
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: var(--b7);
+}
+
+hr {
+	margin: 25px;
+	border-color: var(--b2);
+}
+
+img {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+a {
+	color: var(--bC);
+	text-decoration: none;
+}
+
+code {
+	display: inline-block;
+	background-color: var(--b1);
+	line-height: 20px;
+	font-family: Iosevka;
+	font-size: 16px;
+	border-radius: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 16px;
+	font-family: Iosevka;
+	line-height: 20px;
+	background-color: var(--b1);
+}
+
+table thead tr {
+	background-color: var(--b3);
+	color: var(--b7);
+	text-align: left;
+}
+
+table th, table td {
+	padding: 12px 15px;
+}
+
+table tbody tr:nth-of-type(even) {
+	background-color: var(--b2);
+}
+
+table tbody tr.active-row {
+	font-weight: bold;
+	color: var(--b4);
+}
+
+blockquote * {
+	padding: 5px;
+	padding-left: 20px;
+	font-style: italic;
+}
+
+blockquote p:before {
+	position: absolute;
+	content: '“';
+	font-size: 60px;
+	transform: translateX(-40px) translateY(20px);
+}
+
+#date {
+	font-style: italic;
+}
