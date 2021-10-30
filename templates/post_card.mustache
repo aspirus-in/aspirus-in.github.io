@@ -1,4 +1,7 @@
 <div class="post-card">
-	<h4><a href="{link}">{title}</a></h4>
+	<div class="tags">{''.join(['<p>'+i+'</p>' for i in tags.split(',')])}</div>
+	<a class="title" href="{link}">{title}</a>
 	<p>{summary}</p>
+	<span class="date">{date}</span>
 </div>
+<hr>
