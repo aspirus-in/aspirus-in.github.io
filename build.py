@@ -10,6 +10,8 @@ def eval_template(template, metadata):
 def build_post(post_path):
 	post = frontmatter.load(post_path)
 	post.metadata['html'] = markdown(post.content, extensions=['extra'])
+	summary_content = '\n'.join(post.content.split('\n')[:10])
+	post.metadata['summary'] = markdown(summary_content, extensions=['extra'])
 	post.metadata['link'] = '/'+post_path[:-3]+'.html'
 	with open('templates/post.mustache', 'r') as f:
 		html = eval_template(f.read(), post.metadata)
@@ -45,4 +47,5 @@ def build_folder_recursively(folder):
 
 
 built = build_folder_recursively('post')
+build_post('me.md')
 build_landing_page(built)

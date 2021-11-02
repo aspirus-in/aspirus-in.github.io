@@ -1,12 +1,10 @@
 ---
 title: Markdown Test Page
 date: Some Time Ago
-summary: The only purpose of this post is to test the Markdown Theme and the custom built python build system.
-tags: meta,testing,popular,first
 ---
 # <a name="top"></a>Markdown Test Page
 
-The only purpose of this post is to test the Markdown Theme and the custom built python build system.
+The only purpose of this post is to test the website's build system and css.
 
 ***
 
